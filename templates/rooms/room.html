@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <div class="row mt-4">
+        <div class="col text-center">
+            <p class="lead mb-4">
+                Prosím zadejte informace o Vaší ordinaci. V této fázi se po potvrzení formuláře
+                údaje zapíší do naší interní databáze, kterou poskytujeme hejtmanům a dalším
+                organizacím.
+            </p>
+        </div>
+    </div>
+    <div class="row mt-4 text-center">
+        <div class="col-4 offset-md-4">
+            <form method="post" action="" class="form">
+                {% csrf_token %}
+                {% bootstrap_field form.vat %}
+                {% bootstrap_field form.capacity %}
+<div class="form-group">
+    <label>V jakých dnech můžete očkovat?</label>
+                {% bootstrap_field form.day_monday %}
+                {% bootstrap_field form.day_tuesday %}
+                {% bootstrap_field form.day_wednesday %}
+                {% bootstrap_field form.day_thursday %}
+                {% bootstrap_field form.day_friday %}
+                {% bootstrap_field form.day_sathurday %}
+                {% bootstrap_field form.day_sunday %}
+</div>
+                {% bootstrap_field form.phone %}
+                {% bootstrap_field form.agreement %}
+                {% buttons %}
+                    {% bootstrap_button "Potvrdit údaje" button_type="submit" button_class="btn-primary" %}
+                {% endbuttons %}
+            </form>
+        </div>
+    </div>
+{% endblock content %}

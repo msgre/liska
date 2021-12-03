@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load bootstrap4 %}
+    {% bootstrap_css %}
+    <title>Lékaři pomáhají Česku</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col text-center">
+                <h1 class="display-5 fw-bold">Lékaři pomáhají Česku</h1>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+    {% bootstrap_javascript jquery='full' %}
+  </body>
+</html>

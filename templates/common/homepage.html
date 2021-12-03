@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="row mt-4">
+        <div class="col text-center">
+            <p class="lead mb-4">
+                Sbíráme kontakty na lékaře a další dobrovolníky ochotné pomoci s urychlením
+                vakcinace 3.dávkami.
+            </p>
+            <p class="lead mb-4">
+                <a href="https://www.lekaripomahajicesku.cz/">Více o iniciativě Lékaři pomáhají Česku</a>
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-primary btn-lg px-4 gap-3" href="{% url "help" %}" role="button">Chci pomoci</a>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col text-center">
+            <div class="mt-4 d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <p>Aktuálně v databázi {{ total_count }} osob a ordinací</p>
+            </div>
+            <div class="mt-1 d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <img src="https://via.placeholder.com/640x480">
+            </div>
+        </div>
+    </div>
+{% endblock content %}
